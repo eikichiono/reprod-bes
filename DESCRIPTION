@@ -1,0 +1,15 @@
+Package: reprod-bes
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Eikichi",
+           family = "Ono",
+           role = c("aut", "cre"),
+           email = "e0491209@u.nus.edu",
+           comment = c(ORCID = "0000-0002-0075-8183"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
