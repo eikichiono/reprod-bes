@@ -6,6 +6,7 @@ library(eplusr)
 library(tidyverse)
 library(fs)
 library(here)
+library(targets)
 
 # Create a project
 create_project("/Users/eikichiono/Documents/07_Program_codes/R/reprod-bes")
@@ -69,6 +70,26 @@ file_copy(
 dir_ls(here("data-raw"))
 #> /Users/runner/ReprodBES/data-raw/RefBldgMediumOfficeNew2004_Chicago.idf
 #> /Users/runner/ReprodBES/data-raw/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
+
+# Pane "Git" -> Commit
+
+use_directory("analysis")
+
+# Edit run.R
+
+tar_edit()
+
+# Edit _targets.R
+
+# Addins -> Search "targets" -> Run a target pipeline in the foreground
+
+# Addins -> Search "targets" -> Visualize a targets pipeline -> Select Pane "Viewer"
+
+tar_read(plot_end_use)
+
+tar_read(p_end_use)
+
+
 
 
 

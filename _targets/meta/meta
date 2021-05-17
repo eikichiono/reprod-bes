@@ -1,0 +1,10 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
+read_end_use|function|f67e178db559cd97||||||||||||||
+preprocess_idf|function|b7faf8849774a7d1||||||||||||||
+.Random.seed|object|3b24cd62abeca2b2||||||||||||||
+plot_end_use|function|bfce172d2e773c85||||||||||||||
+path_idf|stem|2aa6c5b8a44a4980|ff15ee5b37e34f3b|ef46db3751d8e999|1339209096|data-raw/RefBldgMediumOfficeNew2004_Chicago.idf|t18764.1207122364s|cbc73497ce271cf3|394133|file|vector|||0.001||
+path_epw|stem|11ad870d275d9389|98d27d48a8cb47dc|ef46db3751d8e999|-1709932628|data-raw/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw|t18764.1207123001s|929888ceb4c12592|1639985|file|vector|||0||
+job|stem|9df5f9d2f70065fa|bc9f48756d5fa22e|59fb69741b2d5dee|754647479||t18764.1433699265s|4d351a14b24d4856|1638511|rds|vector|||21.547||
+tbl_end_use|stem|0e055e377cfc1671|b4393796696b3849|cf14913bab6530d9|-1812780212||t18764.1433711546s|306faf0cc1207484|535|rds|vector|||0.099||
+p_end_use|stem|f6d8ae4cc667aa6f|60ea3b92939e76ad|9738a725e624231e|1388331090||t18764.1433719626s|8f4bc735845ccd73|60496|rds|vector|||0.041||
