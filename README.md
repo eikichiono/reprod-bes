@@ -1,25 +1,62 @@
+# Reproducible BES
 
-# reprod-bes
+More details can be found in [our paper]():
 
-<!-- badges: start -->
-<!-- badges: end -->
+> Eikichi Ono..., (2021).
+> ***.
+> *In Review*. <https://doi.org/xxx/xxx>
 
-The goal of reprod-bes is to ...
+## Citation
 
-## Installation
-
-You can install the released version of reprod-bes from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("reprod-bes")
+Please cite this repository as: 
+```
+@article{ono2021data,
+  title={xxx},
+  author={xxx},
+  year={2021},
+  note={In Review}
+}
 ```
 
-## Example
+## File structure
 
-This is a basic example which shows you how to solve a common problem:
+The main files are:
 
-``` r
-library(reprod-bes)
-## basic example code
+```
+.
+├── DESCRIPTION   # metadata of the project
+├── LICENSE       # license
+├── LICENSE.md    # license
+├── R
+│   └── functions.R
+├── README.md
+├── _targets
+│   ├── meta
+│   └── objects
+├── _targets.R
+├── _targets_packages.R
+├── analysis      # paper
+│   ├── paper
+│   └── run.R
+├── create_project.R
+├── data          # simulation data
+│   └── sim
+├── data-raw      # raw input of the simulation
+│   ├── RefBldgMediumOfficeNew2004_Chicago.idf
+│   └── USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
+├── renv
+│   ├── activate.R
+│   ├── library
+│   ├── local
+│   └── settings.dcf
+├── renv.lock
+└── reprod-bes.Rproj
 ```
 
+## Licenses
+
+**Code**: [MIT](https://github.com/ideas-lab-nus/reproducing-building-simulation/blob/main/LICENSE) license
+
+**Data**: [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse
+
+**Text and figures**: [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
