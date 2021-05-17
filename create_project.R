@@ -1,4 +1,11 @@
+# Workshop on reproducible BES
+# 2021.5.17 by Hongyuan Jia
+
 library(usethis)
+library(eplusr)
+library(tidyverse)
+library(fs)
+library(here)
 
 # Create a project
 create_project("/Users/eikichiono/Documents/07_Program_codes/R/reprod-bes")
@@ -42,7 +49,26 @@ usethis::use_git_config(user.name = "Eikichi Ono", user.email = "e0491209@u.nus.
 
 usethis::use_git()
 
+use_directory("data-raw")
 
+is_avail_eplus(9.4)
+eplus_config(9.4)
+
+# get EnergyPlus v9.4 installation path
+dir_eplus <- eplus_config(9.4)$dir
+
+path_model <- path(dir_eplus, "ExampleFiles/RefBldgMediumOfficeNew2004_Chicago.idf")
+path_weather <- path(dir_eplus, "WeatherData/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw")
+
+file_copy(
+  path = c(path_model, path_weather),
+  new_path = here("data-raw", path_file(c(path_model, path_weather))),
+  overwrite = TRUE
+)
+
+dir_ls(here("data-raw"))
+#> /Users/runner/ReprodBES/data-raw/RefBldgMediumOfficeNew2004_Chicago.idf
+#> /Users/runner/ReprodBES/data-raw/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
 
 
 
