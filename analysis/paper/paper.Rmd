@@ -127,18 +127,21 @@ Eq. \@ref(eq:equation) gives the definition.
 
 # Results
 
-Fig. \@ref(fig:plot) gives a scatter plot.
+Fig. \@ref(fig:plot) gives a pie plot.
+\@(fig:plot)
 
-```{r plot, fig.cap = "A scatter plot"}
-ggplot(mtcars) +
-  geom_point(aes(mpg, cyl)) +
-  theme_bw()
+```{r plot, fig.cap = "A pie plot"}
+targets::tar_read(p_end_use)
 ```
 
 Table \@ref(tab:table) gives a result table.
 
 ```{r table}
-knitr::kable(head(mtcars), caption = "A result table",
+targets::tar_read(tbl_end_use) %>%
+  select(category, electricity_per_area) %>%
+knitr::kable(caption = "A result table",
+             col.names = c("Category","Electricity (kWh/m2)"),
+             digits = 2,
   booktabs = TRUE, linesep = "", position = "htbp")
 ```
 
